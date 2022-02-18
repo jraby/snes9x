@@ -739,20 +739,6 @@ void JoyDevice::flush()
         queue.pop();
 }
 
-
-JoyDevices::JoyDevices()
-{
-}
-
-JoyDevices::~JoyDevices()
-{
-    joysticks.clear();
-}
-
-
-std::map<SDL_JoystickID, std::unique_ptr<JoyDevice>>::const_iterator JoyDevices::begin() const { return joysticks.begin(); }
-std::map<SDL_JoystickID, std::unique_ptr<JoyDevice>>::const_iterator JoyDevices::end() const { return joysticks.end(); }
-
 void JoyDevices::clear()
 {
     joysticks.clear();
